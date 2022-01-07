@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body onkeydown="moveSelection(event)">
+<img src="image/miku.jpg" id="miku" style="position: absolute; left: 100px; top: 100px">
+<script>
+    function upArrowPressed () {
+        let element = document.getElementById("miku");
+        element.style.top = parseInt(element.style.top) - 10 + "px";
+    }
+    function downArrowPressed () {
+        let element = document.getElementById("miku");
+        element.style.top = parseInt(element.style.top) + 10 + "px";
+    }
+    function leftArrowPressed () {
+        let element = document.getElementById("miku");
+        element.style.left = parseInt(element.style.left) - 10 + "px";
+    }
+    function rightArrowPressed () {
+        let element = document.getElementById("miku");
+        element.style.left = parseInt(element.style.left) + 10 + "px";
+    }
+    function moveSelection (evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+</script>
+</body>
+</html>
