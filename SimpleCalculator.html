@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<style>
+    table{
+        width: 350px;
+        height: 250px;
+        border-collapse: collapse;
+        border: black solid 2px;
+        text-align: center;
+    }
+    input{
+        width: 300px;
+    }
+    button{
+        width: 50px;
+    }
+    .he_thong{
+        background-color: aqua;
+    }
+    .display{
+        text-align: right;
+
+    }
+</style>
+<body>
+    <table>
+        <tr id="ket_qua">
+            <td colspan="4"><div class="display"><p id="gia_tri_cu"> </p></div>
+                <div class="display"><p id="gia_tri_xuat"></p></div>
+            </td>
+        </tr>
+        <tr>
+            <td><button class="he_thong" id="xoa_tat_ca">C</button></td>
+            <td><button class="he_thong">CE</button></td>
+            <td><button class="he_thong" id="%">%</button></td>
+            <td><button class="he_thong" id="/">/</button></td>
+        </tr>
+        <tr>
+            <td><button class="con_so" id="1">1</button></td>
+            <td><button class="con_so" id="2">2</button></td>
+            <td><button class="con_so" id="3">3</button></td>
+            <td><button class="he_thong" id="*">x</button></td>
+        </tr>
+        <tr>
+            <td><button class="con_so" id="4">4</button></td>
+            <td><button class="con_so" id="5">5</button></td>
+            <td><button class="con_so" id="6">6</button></td>
+            <td><button class="he_thong" id="-">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="con_so" id="7">7</button></td>
+            <td><button class="con_so" id="8">8</button></td>
+            <td><button class="con_so" id="9">9</button></td>
+            <td><button class="he_thong" id="+">+</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button class="con_so" id="0">0</button></td>
+            <td></td>
+            <td><button class="he_thong" id="=">=</button></td>
+        </tr>
+    </table>
+<script src="SimpleCalculator.js"></script>
+</body>
+</html>
