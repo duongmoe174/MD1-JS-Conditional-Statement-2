@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="kTra" placeholder="Nhập điểm ktra">
+<input type="text" id="giuaKy" placeholder="Nhập điểm giữa kỳ">
+<input type="text" id="cuoiKy" placeholder="Nhập điểm cuối kỳ">
+<button onclick="check()">Check học lực</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let diemKTra = Number(document.getElementById("kTra").value);
+        let diemGiuaKy = Number(document.getElementById("giuaKy").value);
+        let diemCuoiKy = Number(document.getElementById("cuoiKy").value);
+        let tongDiem = diemKTra + diemCuoiKy + diemCuoiKy;
+        let avg = tongDiem / 3;
+        if (avg <= 5) {
+            document.getElementById("result").innerText = "Học lực kém";
+        }
+        if (avg > 5 && avg <= 8) {
+            document.getElementById("result").innerText = "Học lực khá";
+        }
+        if (avg <= 10 && avg > 8) {
+            document.getElementById("result").innerText = "Học lực giỏi";
+        }
+    }
+</script>
+</body>
+</html>

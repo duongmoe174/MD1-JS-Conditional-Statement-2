@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check tuổi học sinh</title>
+</head>
+<body>
+<input type="text" id="age" placeholder="Nhập tuổi của hs">
+<button onclick="check()">Check</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let tuoi = Number(document.getElementById("age").value);
+        if (tuoi < 16) {
+            document.getElementById("result").innerText = "chưa đủ tuổi vào lớp 10";
+        } else {
+            document.getElementById("result").innerText = "đã đủ tuổi vào lớp 10";
+        }
+    }
+</script>
+</body>
+</html>

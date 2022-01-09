@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonus</title>
+</head>
+<body>
+<input type="text" id="sales" placeholder="Nhập doanh số tháng">
+<button onclick="check()">Mức thưởng</button>
+<p id="result"></p>
+<script>
+    function check() {
+       // console.log(number.toLocaleString("en"));
+        const sales = Number(document.getElementById("sales").value);
+        const sales10 = sales*0.1;
+        const sales15 = sales*0.15;
+        const sales20 = sales*0.2;
+        if (sales < 10000000) {
+            document.getElementById("result").innerText = "Mức hoa hồng nhận được bằng 10% doanh số----" + sales10;
+        }
+        if (sales >= 10000000 && sales < 20000000) {
+            document.getElementById("result").innerText = "Mức hoa hồng nhận được bằng 15% doanh số----" + sales15;
+        }
+        if (sales >= 20000000) {
+            document.getElementById("result").innerText = "Mức hoa hồng nhận được bằng 20% doanh số----" + sales20;
+        }
+    }
+</script>
+</body>
+</html>

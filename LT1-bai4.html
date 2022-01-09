@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find max number</title>
+</head>
+<body>
+<input type="text" id="number1" placeholder="nhập số thứ nhất">
+<input type="text" id="number2" placeholder="nhập số thứ hai">
+<input type="text" id="number3" placeholder="nhập số thứ ba">
+<button onclick="check()">FindMax</button>
+<p id="result"></p>
+<script>
+    function check() {
+        let a = Number(document.getElementById("number1").value);
+        let b = Number(document.getElementById("number2").value);
+        let c = Number(document.getElementById("number3").value);
+        let max = a;
+        if (max < b ) {
+            document.getElementById("result").innerText = b + "  là số lớn nhất!";
+        }
+        if (max < c ) {
+            document.getElementById("result").innerText = c + "  là số lớn nhất!";
+        }
+        if ( max > b && max > c) {
+            document.getElementById("result").innerText = a + "  là số lớn nhất";
+        }
+    }
+</script>
+</body>
+</html>
