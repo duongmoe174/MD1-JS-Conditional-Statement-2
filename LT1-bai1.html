@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập</title>
+</head>
+<body>
+<input type="text" id="a" placeholder="Nhập số a">
+<input type="text" id="b" placeholder="Nhập số b">
+<button onclick="check()">Check</button>
+<p id="result" style="color: aqua"></p>
+<script>
+    function check() {
+        let a = Number(document.getElementById("a").value);
+        let b = Number(document.getElementById("b").value);
+        if (a % b == 0) {
+            document.getElementById("result").innerText = "bằng" + a/b + ": a chia hết cho b đó";
+        } else {
+            document.getElementById("result").innerText = a/b + ": a không chia hết cho b rồi";
+        }
+    }
+</script>
+</body>
+</html>
